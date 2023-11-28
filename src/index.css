@@ -1,0 +1,537 @@
+body {
+  background-color: #dadada;
+}
+
+@font-face {
+  font-family: "Cheveuxdange";
+  src: URL("fonts/Cheveuxdange.ttf") format("truetype");
+}
+
+.solutions h1 {
+  font-size: 60px;
+  font-family: Cheveuxdange;
+  text-align: center;
+}
+
+.timerInput {
+  padding: 10px 10px;
+  margin: 0px 0px;
+  display: inline-block;
+  border: 2px solid #156711;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.button {
+  border: none;
+  color: white;
+  margin: 20px 20px;
+  margin-left: 20px;
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 55%;
+  height: 70px;
+}
+
+.button-letters {
+  background-color: #142d48;
+}
+
+.button-letters:hover {
+  background-color: #000204;
+}
+
+.button-numbers {
+  background-color: #801515;
+}
+
+.button-numbers:hover {
+  background-color: #561111;
+}
+
+.button:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.table {
+  border: none;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  ;
+}
+
+.btn-table {
+  border: none;
+  width: 100%;
+}
+
+.letterCell {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: thick solid black;
+  font-family: arial;
+  font-size: 30px;
+  height: 100px;
+  width: 100px;
+}
+
+#letterRow {
+  visibility: hidden;
+}
+
+.arrowTableArea {
+  background-color: #dadada;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  font-family: arial;
+  height: 40px;
+  width: 100px;
+}
+
+.blankTableArea {
+  background-color: #dadada;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  font-family: arial;
+  height: 100px;
+  width: 280px;
+}
+
+.totalDisplayArea {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: thick solid black;
+  font-family: arial;
+  font-size: 70px;
+  font-weight: bold;
+  height: 130px;
+  width: 250px;
+}
+
+.menuDisplayArea {
+  height: 100px;
+  width: 1533px;
+  margin-top: -25px;
+  margin-left: -15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.nav-letters {
+  background-color: #142d48;
+}
+
+.nav-numbers {
+  background-color: #801515;
+}
+
+.menuDisplayArea p {
+  color: white;
+  font-family: arial;
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 5px;
+}
+
+.nav-button {
+  float: right;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.nav-title {
+  float: left;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 40px solid;
+  visibility: hidden;
+}
+
+.triangle-up:hover {
+  border-bottom: 40px solid #000204;
+  cursor: pointer;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 40px solid;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.triangle-letters {
+  border-top-color: #142d48;
+  border-bottom-color: #142d48;
+}
+
+.triangle-letters:hover {
+  border-top-color: #000204;
+  border-bottom-color: #000204;
+  cursor: pointer;
+}
+
+.triangle-numbers {
+  border-top-color: #801515;
+  border-bottom-color: #801515;
+}
+
+.triangle-numbers:hover {
+  border-top-color: #561111;
+  border-bottom-color: #561111;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: black;
+  font-family: Cheveuxdange;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.startButton {
+  background-color: #105f25;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 4px;
+  left: 100px;
+  top: -66px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.startButton:hover {
+  background-color: #004011;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.stopButton {
+  background-color: black;
+  border: none;
+  color: white;
+  margin-top: 150px;
+  margin-left: 500px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.stopButton:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.tinyTimerText {
+  color: orange;
+  font-family: Digital;
+  font-size: 80px;
+  margin-top: 55px;
+  margin-left: 45px;
+  z-index: 2;
+  position: absolute;
+}
+
+.tinyTimerImage {
+  z-index: -1;
+}
+
+.timerText {
+  position: fixed;
+  top: 21%;
+  left: 53%;
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  font-family: Digital;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+}
+
+.timerImage {
+  position: fixed;
+  margin-left: -170px;
+}
+
+.minutes {
+  position: fixed;
+  top: 47%;
+  left: 38%;
+  font-size: 260px;
+  color: orange;
+  font-weight: bold;
+  font-family: Digital;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 260px;
+  background: none;
+  border: none;
+}
+
+.seconds {
+  position: fixed;
+  top: 47%;
+  left: 61%;
+  font-size: 260px;
+  color: orange;
+  font-weight: bold;
+  font-family: Digital;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 260px;
+  background: none;
+  border: none;
+}
+
+.tinyTimer {
+  visibility: hidden;
+}
+
+.blankTableAreaExtend {
+  background-color: #dadada;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  font-family: arial;
+  height: 100px;
+  width: 250px;
+}
+
+#overlayTimer {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.saveButton {
+  background-color: white;
+  border: thick #000204 solid;
+  color: black;
+  font-weight: bold;
+  padding: 15px 32px;
+  border-radius: 4px;
+  left: 500px;
+  top: 330px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.settingsInput {
+  padding: 10px 10px;
+  margin: 0px 0px;
+  display: inline-block;
+  border: 2px solid #801515;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.saveButton:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #000204;
+}
+
+.stopButtonSettings {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-top: 150px;
+  margin-left: 500px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.stopButtonSettings:hover {
+  color: #000204;
+  cursor: pointer;
+}
+
+.settingsText {
+  position: fixed;
+  top: 21%;
+  left: 53%;
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  font-family: Digital;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+}
+
+.settingsImage {
+  position: fixed;
+  margin-left: -170px;
+}
+
+.overlaySettings {
+  position: fixed;
+  display: none;
+  width: 110%;
+  height: 100%;
+  top: 0;
+  left: -120;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.sliderDisplay {
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  position: fixed;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.letters-slider {
+  accent-color: #142d48;
+}
+
+.numbers-slider {
+  accent-color: #801515;
+}
+
+.dropdown {
+  width: 80%;
+  accent-color: #142d48;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.checkbox {
+  accent-color: #142d48;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 20px;
+  width: 100%;
+}
+
+.slideOutput {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.btn-dock {
+  text-align: center;
+  width: 100%;
+}
+
+.popup {
+  padding: 30px;
+}
+
+.popup-header {
+  font-weight: bold;
+  font-family: "Cheveuxdange";
+  text-align: center;
+}
+
+.popup-text {
+  font-size: 20px;
+  font-family: "Cheveuxdange";
+  text-align: center;
+}
+
+.settings-label {
+  font-size: 15px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.settings-form {
+  text-align: center;
+}
